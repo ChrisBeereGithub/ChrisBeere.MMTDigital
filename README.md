@@ -2,7 +2,7 @@
 Getting Started
 ---------------
 
-Clone the repo and open the solution in Visual Studio.
+Clone the repo and open the solution in Visual Studio. Build it.
 
 Hit Start and the Api will fire up and default to :
 
