@@ -34,6 +34,14 @@ namespace ChrisBeere.MMTDigital.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Relax Cors policy to enable a development UI (such as an Angular SPA or MVC Web App) to use the Api.
+            services.AddCors(o => o.AddPolicy("AllowAll", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen();
 
@@ -62,6 +70,8 @@ namespace ChrisBeere.MMTDigital.WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            app.UseCors("AllowAll");
+
             var path = Directory.GetCurrentDirectory();
             loggerFactory.AddFile($"{path}\\Logs\\Log.txt");
 
@@ -97,11 +107,6 @@ namespace ChrisBeere.MMTDigital.WebApi
             return HttpPolicyExtensions
                 // Handle HttpRequestExceptions, 408 and 5xx status codes
                 .HandleTransientHttpError()
-                // Handle 404 not found
-                .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-                // Handle 401 Unauthorized
-                .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-                // What to do if any of the above errors occur:
                 // Retry 3 times, each time wait 1,2 and 4 seconds before retrying.
                 .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
         }

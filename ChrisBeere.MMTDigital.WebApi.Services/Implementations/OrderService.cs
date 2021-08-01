@@ -93,9 +93,24 @@ namespace ChrisBeere.MMTDigital.WebApi.Services.Implementations
 
                     customerOrderDto.Order.OrderNumber = orderData.OrderId;
                     customerOrderDto.Order.OrderDate = orderData.OrderDate.ToString("dd-MMMM-yyyy");
-                    customerOrderDto.Order.DeliveryAddress =
-                        $"{customer.HouseNumber} {customer.Street}, {customer.Town}, {customer.PostCode}";
-
+                    customerOrderDto.Order.DeliveryAddress = string.Empty;
+                    if (!String.IsNullOrEmpty(customer.HouseNumber))
+                    {
+                        customerOrderDto.Order.DeliveryAddress += customer.HouseNumber;
+                    }
+                    if (!String.IsNullOrEmpty(customer.Street))
+                    {
+                        customerOrderDto.Order.DeliveryAddress += " " + customer.Street;
+                    }
+                    if (!String.IsNullOrEmpty(customer.Town))
+                    {
+                        customerOrderDto.Order.DeliveryAddress += ", " + customer.Town;
+                    }
+                    if (!String.IsNullOrEmpty(customer.PostCode))
+                    {
+                        customerOrderDto.Order.DeliveryAddress += ", " + customer.PostCode;
+                    }
+                    
                     customerOrderDto.Order.DeliveryExpected = orderData.DeliveryExpected.ToString("dd-MMMM-yyyy");
 
                     foreach (CustomerOrderItemDto customerOrderItem in customerOrderItems)
