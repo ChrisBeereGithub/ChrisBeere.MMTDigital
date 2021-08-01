@@ -8,7 +8,7 @@ Hit Start and the Api will fire up and default to :
 
 http://localhost:50609/swagger/index.html 
 
-Here you can browse the Api endpoint definition using Swagger
+Here you can browse the Api endpoint definition using Swagger.
 
 
 To make requests to the Api use the endpoint :
@@ -30,7 +30,7 @@ The result of this is that the first request made against the Api can often be s
 -------------------------------------------
 Solution Structure and Project Descriptions
 -------------------------------------------
-ChrisBeere.MMTDigital - Solution 
+ChrisBeere.MMTDigital - Solution.
 
 ChrisBeere.MMTDigital.WebApi - This is the main project that defines the endpoints and configuration for the Web Api.
 
