@@ -42,7 +42,7 @@ ChrisBeere.MMTDigital.WebApi.ExternalApiServices - This is the external Api reso
 
 ChrisBeere.MMTDigital.WebApi.Tests - Unit tests. Also contains a document of integration tests with test evidence from Postman.
 
-Logs are generated to the physical path of the ChrisBeere.MMTDigital.WebApi project + \Logs\Log.txt
+Logs are generated to the physical path of the ChrisBeere.MMTDigital.WebApi project + \Logs\Log*.txt
 
 ------------------------------------------------------------------------------------
 List of outstanding tasks that might need to be considered before production release
