@@ -34,7 +34,7 @@ ChrisBeere.MMTDigital - Solution
 
 ChrisBeere.MMTDigital.WebApi - This is the main project that defines the endpoints and configuration for the Web Api.
 
-ChrisBeere.MMTDigital.WebApi.Data - Contains Sql Server related repositories, Contexts and Models.
+ChrisBeere.MMTDigital.WebApi.Data - Contains Sql Server related repositories, contexts and models.
 
 ChrisBeere.MMTDigital.WebApi.Services - This is the resource communication layer.
 
