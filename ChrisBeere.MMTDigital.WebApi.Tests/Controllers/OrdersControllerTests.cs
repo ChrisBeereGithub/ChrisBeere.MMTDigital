@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 namespace ChrisBeere.MMTDigital.WebApi.Tests
 {
     /// <summary>
-    /// Test class covering all defined response types for the GetMostRecentCustomerOrder endpoint.
+    /// Test class covering all defined response types for the GetMostRecentCustomerOrderAsync endpoint.
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class OrdersControllerTests
