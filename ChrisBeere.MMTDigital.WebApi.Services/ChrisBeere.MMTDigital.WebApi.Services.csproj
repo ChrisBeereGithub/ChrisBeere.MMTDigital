@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChrisBeere.MMTDigital.WebApi.Data\ChrisBeere.MMTDigital.WebApi.Data.csproj" />
+    <ProjectReference Include="..\ChrisBeere.MMTDigital.WebApi.ExternalApiServices\ChrisBeere.MMTDigital.WebApi.ExternalApiServices.csproj" />
+  </ItemGroup>
+
+</Project>
