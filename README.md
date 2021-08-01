@@ -44,11 +44,11 @@ ChrisBeere.MMTDigital.WebApi.Tests - Unit tests. Also contains a document of int
 
 Logs are generated to the physical path of the ChrisBeere.MMTDigital.WebApi project + \Logs\Log*.txt
 
-------------------------------------------------------------------------------------
-List of outstanding tasks that might need to be considered before production release
-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+List of outstanding tasks that need to be considered before production release
+-------------------------------------------------------------------------------
 
-Full unit test coverage. 
+Full unit test coverage.
 
 Enable SSL and setup server certificate.
 
