@@ -8,63 +8,214 @@
 		{
 			"name": "Post Customer Order Good Request",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"cat.owner@mmtdigital.co.uk\",\r\n    \"customerId\": \"C34454\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50609/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50609",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Post Customer Order Good Request Gift",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"santa@north-pole.lp.com\",\r\n    \"customerId\": \"XM45001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50609/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50609",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Post Customer Order Good Request Nulls",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"sneeze@fake-customer.com\",\r\n    \"customerId\": \"A99001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50609/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50609",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Post Customer Order Bad Request",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"\",\r\n    \"customerid\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50609/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50609",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Post Customer Order Invalid User",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"john\",\r\n    \"customerid\" : \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50609/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50609",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Post Customer Order Valid Email Invalid Id",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"cat.owner@mmtdigital.co.uk\",\r\n    \"customerId\": \"rubbish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50609/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50609",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Customer Request",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "https://customer-account-details.azurewebsites.net/api/GetUserDetails?email=cat.owner@mmtdigital.co.uk&code=1CrsOooSHlV15C7OYnLY0DHjBHyjzoI8LNHITV04cNCyNCahecPDhw==",
+					"protocol": "https",
+					"host": [
+						"customer-account-details",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"GetUserDetails"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "cat.owner@mmtdigital.co.uk"
+						},
+						{
+							"key": "code",
+							"value": "1CrsOooSHlV15C7OYnLY0DHjBHyjzoI8LNHITV04cNCyNCahecPDhw=="
+						}
+					]
+				}
 			},
 			"response": []
 		}
