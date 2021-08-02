@@ -40,7 +40,7 @@ ChrisBeere.MMTDigital.WebApi.Services - This is the resource communication layer
 
 ChrisBeere.MMTDigital.WebApi.ExternalApiServices - This is the external Api resource communication layer.
 
-ChrisBeere.MMTDigital.WebApi.Tests - Unit tests. Also contains a document of integration tests with test evidence from Postman.
+ChrisBeere.MMTDigital.WebApi.Tests - Unit tests and integration tests.
 
 Logs are generated to the physical path of the ChrisBeere.MMTDigital.WebApi project + \Logs\Log*.txt
 
