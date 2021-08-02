@@ -25,7 +25,7 @@ The SSE_Test Sql Server cold starts frequently (possibly a pay as you go cloud s
 
 To mitigate this EnableRetryOnFailure has been enabled with the default execution policy. 
 
-The result of this is that the first request made against the Api can often be slow as it performs retries whilst waiting for the server to spin up.
+The result of this is that the first request made against the Api can often be slow (anywhere upto 60 seconds) as it performs retries whilst waiting for the server to spin up.
 
 -------------------------------------------
 Solution Structure and Project Descriptions
@@ -40,7 +40,7 @@ ChrisBeere.MMTDigital.WebApi.Services - This is the resource communication layer
 
 ChrisBeere.MMTDigital.WebApi.ExternalApiServices - This is the external Api resource communication layer.
 
-ChrisBeere.MMTDigital.WebApi.Tests - Unit tests. Also contains a document of integration tests with test evidence from Postman.
+ChrisBeere.MMTDigital.WebApi.Tests - Unit tests and integration tests.
 
 Logs are generated to the physical path of the ChrisBeere.MMTDigital.WebApi project + \Logs\Log*.txt
 
