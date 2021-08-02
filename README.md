@@ -50,6 +50,8 @@ List of outstanding tasks that need to be considered before production release
 
 Full unit test coverage.
 
+Integration tests need to be automated.
+
 Update CORS policy to reflect permitted domains.
 
 Enable SSL and setup server certificate.
